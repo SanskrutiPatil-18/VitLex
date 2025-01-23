@@ -13,7 +13,6 @@ To create a chatbot that offers mental health support to individuals by providin
 - General guidance
 
 **Key Features:**
-- Real-time sentiment analysis to understand user emotions.
 - Personalized responses based on user input.
 - Secure and confidential user interaction.
 - Cloud-based deployment for scalability and accessibility.
@@ -22,9 +21,7 @@ To create a chatbot that offers mental health support to individuals by providin
 1. **Innovative Idea:** VitaLex focuses on bridging the gap in mental health support using AI-powered technology.
 2. **Usage of IBM Cloud Platform:** Deployed on IBM Cloud, utilizing Watson services for NLP and sentiment analysis.
 3. **Societal Benefits:** Supports mental well-being, helping users manage stress, anxiety, and other mental health challenges.
-4. **Readiness for Development:** A functional MVP ready for real-world application.
-5. **Future Scope:** Expandable to support multi-language communication and integrate with healthcare professionals.
-6. **Project Presentation:** Comprehensive documentation and deployment strategy.
+4. **Future Scope:** Expandable to support multi-language communication and integrate with healthcare professionals.
 
 ---
 
@@ -32,9 +29,6 @@ To create a chatbot that offers mental health support to individuals by providin
 
 **Frontend:**
 - HTML, CSS, JavaScript (User interface for chatbot interaction)
-
-**Backend:**
-- Python (Flask framework for API development)
 
 **AI/ML:**
 - IBM Watson Natural Language Understanding (NLP and sentiment analysis)
@@ -48,9 +42,8 @@ To create a chatbot that offers mental health support to individuals by providin
 ## Installation and Setup
 
 ### Prerequisites
-- Python 3.x installed
 - IBM Cloud account with access to Watson services
-- Basic knowledge of Flask and web development
+- Basic knowledge of web development
 
 ### Steps to Run the Project Locally
 
@@ -110,14 +103,8 @@ To create a chatbot that offers mental health support to individuals by providin
 ---
 
 ## Contributors
-- **Your Name**: Team Lead, Backend Development
-- **Teammate's Name**: Frontend Development, Presentation
-- **Mentor's Name**: Project Guidance and Support
-
----
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+- **Sanskruti Patil**:  Chatbot Development
+- **Vaishnavi Pokale**: Frontend Development, Presentation
 
 ---
 
