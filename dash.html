@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Dashboard</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f3f8fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar Styling */
+    nav {
+      background-color: #6db4a3;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #5aa897;
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      background-color: #a5d6d3;
+      color: #2f4f4f;
+      padding: 60px 20px;
+      margin-bottom: 30px;
+      border-radius: 0 0 50% 50% / 10%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* Dashboard Cards */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1200px;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #6db4a3;
+    }
+    .card button {
+      background-color: #6db4a3;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .card button:hover {
+      background-color: #5aa897;
+    }
+
+    /* Sections */
+    .section {
+      display: none;
+      padding: 20px;
+      background: white;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+    }
+    .section.active {
+      display: block;
+    }
+    .section h2 {
+      color: #6db4a3;
+      margin-bottom: 15px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #6db4a3;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href=" file:///E:/website/Website%20with%20Login%20&%20Signup%20Form/index.html#">Home</a></li>
+      <li><a href="file:///E:/website/Website%20with%20Login%20&%20Signup%20Form/portfilo.html">Portfolio</a></li>
+      <li><a href="E:/website/Website%20with%20Login%20&%20Signup%20Form/facility.html">Dashboard</a></li>
+      <li><a href="file:///E:/website/Website%20with%20Login%20&%20Signup%20Form/about%20us.html ">Contact</a></li>
+      <li><a href="file:///E:/website/Website%20with%20Login%20&%20Signup%20Form/facility.html#contact ">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="home">
+    <h1>Welcome To VitaLex</h1><h3>
+        Your journey to better mental health begins here.
+        
+        At VitaLex, we believe that everyone deserves a safe space to talk, reflect, and grow. Whether you're feeling overwhelmed, stressed, or just need someone to listen, VitaLex is here to guide you. Our AI-powered mental health counseling chatbot is designed to provide compassionate support, insightful guidance, and helpful resources 24/7.
+        
+        Take the first step toward clarity and well-being with VitaLex—your trusted companion for a healthier mind.</h3>
+    
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about" class="section active">
+    <h2>About Us</h2>
+    <p>We are dedicated to improving mental health and well-being through accessible resources and personalized guidance.</p>
+  </section>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="container">
+    <div class="card">
+      <h3>Sadness and Depression</h3>
+      <button onclick="showSection('depression')">Learn More</button>
+    </div>
+    <div class="card">
+      <h3>Stress and Anxiety</h3>
+      <button onclick="showSection('anxiety')">Learn More</button>
+    </div>
+    <div class="card">
+      <h3>General Advice</h3>
+      <button onclick="showSection('advice')">Learn More</button>
+    </div>
+    <div class="card">
+      <h3>Self-Care</h3>
+      <button onclick="showSection('selfcare')">Learn More</button>
+    </div>
+    <div class="card">
+      <h3>Loneliness and Relationships</h3>
+      <button onclick="showSection('relationships')">Learn More</button>
+    </div>
+    <div class="card">
+      <h3>Motivation and Positivity</h3>
+      <button onclick="showSection('motivation')">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Sections for Details -->
+  <div id="depression" class="section">
+    <h2>Sadness and Depression</h2>
+    <p>Find ways to cope with sadness and depression through therapy, mindfulness, and support systems.</p>
+  </div>
+  <div id="anxiety" class="section">
+    <h2>Stress and Anxiety</h2>
+    <p>Learn to manage stress and anxiety with relaxation techniques, exercise, and time management.</p>
+  </div>
+  <div id="advice" class="section">
+    <h2>General Advice</h2>
+    <p>Explore tips and strategies to improve overall mental health and well-being.</p>
+  </div>
+  <div id="selfcare" class="section">
+    <h2>Self-Care</h2>
+    <p>Discover the importance of self-care and how to prioritize it in your daily routine.</p>
+  </div>
+  <div id="relationships" class="section">
+    <h2>Loneliness and Relationships</h2>
+    <p>Build meaningful relationships and learn to navigate feelings of loneliness.</p>
+  </div>
+  <div id="motivation" class="section">
+    <h2>Motivation and Positivity</h2>
+    <p>Stay motivated and cultivate positivity to achieve your goals and improve your outlook on life.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact us: VitaLex support@mentalwellbeing.com</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "11ecd1ab-2468-43ad-8d42-0d98f113103d", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "dc0667f2-e006-4131-a3b5-3fb2da2c0bf5", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>

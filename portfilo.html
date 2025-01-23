@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f3f8fb;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #6db4a3;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #5aa897;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to bottom, #a5d6d3, #ffffff);
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 0 0 50% 50% / 10%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: #2f4f4f;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: #555;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .portfolio-item {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .portfolio-item h3 {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      color: #6db4a3;
+    }
+    .portfolio-item p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #a5d6d3;
+      padding: 40px 20px;
+      text-align: center;
+      color: #2f4f4f;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .contact form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .contact form input, .contact form textarea, .contact form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .contact form button {
+      background-color: #6db4a3;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .contact form button:hover {
+      background-color: #5aa897;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #6db4a3;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="E:/website/Website%20with%20Login%20&%20Signup%20Form/dash.html?">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Our Portfolio</h1>
+    <p>Explore our projects, skills, and journey.</p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-item">
+      <img src="E:\website\Website with Login & Signup Form\images\logo.jpg" alt="Logo">
+      <h3>VitaLex</h3>
+      <p>Our project, VitaLex, aims to bridge this gap by offering a secure, user-friendly platform where users can interact with a virtual assistant for advice tailored to their emotional needs.
+      <br>
+      Additionally, the platform is designed to seamlessly integrate professional counseling services in the future, ensuring scalability and greater impact.</p>
+    </div>
+   
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
